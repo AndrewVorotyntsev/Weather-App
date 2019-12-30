@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="city">
+            <input v-model="city">
+            <button v-on:click="getCode">Поиск</button>
+            <button v-on:click="getData">Показать результат</button>
+            {{test}}
+            <div align="center">
+              <h1>Weather in the {{city}}</h1>
+              <h1>Прогноз погоды на сегодня ( {{date}} )</h1>
+              <p>Минимальная температура: {{minTemp}} °C</p>
+              <p>Максимальняа температура: {{maxTemp}} °C</p>
+              <h2>День</h2>
+              <p>Скорость ветра: {{DayWind}} км/ч</p>
+              <p>Количество осадков : {{DayTotalLiquid}} мм</p>
+              <p>Дождь : {{DayRain}} мм</p>
+              <p>Снег : {{DaySnow}} cм</p>
+              <p>Град : {{DayIce}} мм</p>
+              <h2>Ночь</h2>
+              <p>Скорость ветра: {{NightWind}} км/ч</p>
+              <p>Количество осадков : {{NightTotalLiquid}} мм</p>
+              <p>Дождь : {{NightRain}} мм</p>
+              <p>Снег : {{NightSnow}} cм</p>
+              <p>Град : {{NightIce}} мм</p>
+            </div>
+            <p></p>
+            <p>Данные предоставлены Accuweather</p>
+            
+        </div>
+        <script src="Weather.js"></script>
+    </body>
+</html>
