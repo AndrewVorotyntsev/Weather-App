@@ -23,7 +23,8 @@ var app1 = new Vue({
     methods: {
         getCode: function () {
             if (this.city != null) {
-            a = "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=&q=" + this.city
+            // "http://dataservice.accuweather.com/locations/v1/cities/search?apikey={your api key}Х/&q=" + this.city
+            "http://dataservice.accuweather.com/locations/v1/cities/search?apikey=&q=" + this.city
             let url = new URL(a)
             axios
                 .get(url)
